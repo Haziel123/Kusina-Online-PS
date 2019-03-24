@@ -4,7 +4,7 @@ function check(form){
 			return false;
 		}
 			if(form.uname.value == "Admin" && form.pwd.value == "Admin"){
-				window.open('home.html')
+				window.open('home.php')
 				
 				
 			}

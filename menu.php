@@ -32,23 +32,16 @@
 		<script src="bootstrap-4.0.0-beta.3-dist/js/bootstrap.bundle.min.js"></script>
 		<link rel="stylesheet" href="style.css" type="text/css">
 </head>
-<body>
-<div class="container">
-	<form action="menu.php" method="POST">
-		<nav class="navbar navbar-expand-lg navbar-light bg-light">
-		<a class="navbar-brand" href="menu.php">Menu</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-		<span class="navbar-toggler-icon"></span>
-		</button>
+<body><br/>
+	<div class="container">
+		<nav aria-label="breadcrumb">
+		<ol class="breadcrumb">
+		<li class="breadcrumb-item"><a href="home.php">Back</a></li>
+		<li class="breadcrumb-item active" aria-current="page">Menu</li>
+	</ol>
+  </nav>
+<br/>
 
-	<div class="collapse navbar-collapse" id="navbarSupportedContent">
-		<ul class="navbar-nav mr-auto">
-		<li class="nav-item">
-        <a class="nav-link" href="home.php">back</a>
-		</li>
-		</ul>
-	</div>
-</nav><br/>
 	<div class="container">
 		<div class="col-sm-12">
 		<div class="table-responsive">
@@ -61,15 +54,16 @@
 			<th>Price</th>
 			<th>Unit</th>
 			<th>Action</th>
+			<td>
 			<div class="btn-group">
-			<button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Option
+			<button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Add
 			</button>
 			<div class="dropdown-menu">
 			<a  data-toggle="modal" data-target="#exampleModalCenter1" class="dropdown-item">Add</a>
-			<a class="dropdown-item" href="menu.php?edit=<?php echo $row['menu_id']; ?>">Edit</a>
-			<a class="dropdown-item" href="process2.php?delete=<?php echo $row["menu_id"]; ?>" onclick="return confirm('Are you sure?');">Delete</a>
+			
 			</div>
 			</div>
+			</td>
 		</tr>
 		</thead>
 			
@@ -100,7 +94,7 @@
 				<div class="modal-dialog modal-dialog-centered" role="form-control">
 				<div class="modal-content">
 				<div class="modal-header">
-					<h5 class="modal-title" >Add Menu</h5>
+				<h5 class="modal-title" >Add Menu</h5>
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 				<span aria-hidden="true">&times;</span>
 				</button>
@@ -108,49 +102,52 @@
 			  <div class="modal-body">
 			<?php require_once 'process2.php'; ?>
 			<form action="process2.php" method="post">
-			 <input type="hidden" name="menu_id" value="<?php echo $menu_id; ?>">
-			  <label class="col-form-label">Menu ID:</label>
-			   <input type="text" class="form-control form-control-sm" name="menu_id" placeholder="" required>
-			    <label class="col-form-label">Menu Name:</label>
-				 <input type="text" class="form-control form-control-sm" name="menu_name" placeholder="" required>
-				  <label class="col-form-label">Description:</label>
-				   <input type="text" class="form-control form-control-sm" name="description" placeholder="" required>
-					<label class="col-form-label">Price:</label>
-					 <input type="text" class="form-control form-control-sm" name="price" placeholder="" required>
-					  <label class="col-form-label">Unit:</label>
-					   <input type="number" class="form-control form-control-sm" name="unit" placeholder="" required><br/>
-						<input class="btn btn-danger btn-block button2" type="submit" name="add" value="Save" onclick="return confirm('Are you sure?');">
-						</form>
-					   </div>
-					<div class="modal-footer">
-					<button type="button" class="btn btn-primary btn-block button2" data-dismiss="modal">Close</button>
-				    </div>
-					</div>
-				    </div>
-			        </div>
-				  </div>
+			<input type="hidden" name="menu_id" value="<?php echo $menu_id; ?>">
+			<label class="col-form-label">Menu ID:</label>
+			<input type="text" class="form-control form-control-sm" name="menu_id" placeholder="" required>
+			<label class="col-form-label">Menu Name:</label>
+			<input type="text" class="form-control form-control-sm" name="menu_name" placeholder="" required>
+			
+			
+			<label class="col-form-label">Description:</label>
+			<textarea class="form-control" rows="5" id="comment" name="description" placeholder="" required></textarea>
+	
+			<label class="col-form-label">Price:</label>
+			<input type="text" class="form-control form-control-sm" name="price" placeholder="" required>
+			<label class="col-form-label">Unit:</label>
+			<input type="number" class="form-control form-control-sm" name="unit" placeholder="" required><br/>
+			<input class="btn btn-danger btn-block button2" type="submit" name="add" value="Save" onclick="return confirm('Are you sure?');">
+			</form>
+		    </div>
+				<div class="modal-footer">
+				<button type="button" class="btn btn-primary btn-block button2" data-dismiss="modal">Close</button>
+				</div>
+				</div>
+				</div>
+			    </div>
+				</div>
 				</div>
 				<div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
 				<div class="modal-dialog modal-dialog-centered" role="form-control">
 				<div class="modal-content">
 				<div class="modal-header">
-					<h5 class="modal-title" >Update</h5>
+				<h5 class="modal-title" >Update</h5>
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 				<span aria-hidden="true">&times;</span>
 				</button>
-			   </div>
-			  <div class="modal-body">
-			<?php require_once 'process2.php'; ?>
-			<form action="process2.php" method="post">
-			 <input type="hidden" name="menu_id" value="<?php echo $menu_id; ?>">
-			  <label class="col-form-label">Menu Name:</label>
-			   <input type="text" class="form-control form-control-sm" name="menu_name" placeholder="" value="<?php echo $menu_name; ?>" required>
-			    <label class="col-form-label">Description:</label>
-			     <input type="text" class="form-control form-control-sm" name="description" placeholder="" value="<?php echo $description; ?>" required>
-			      <label class="col-form-label">Price:</label>
-			       <input type="text" class="form-control form-control-sm" name="price" placeholder="" value="<?php echo $price; ?>" required>
-			     	<label class="col-form-label">Unit:</label>
-				     <input type="number" class="form-control form-control-sm" name="unit" placeholder="" value="<?php echo $unit; ?>" required><br/>
+				</div>
+				<div class="modal-body">
+					<?php require_once 'process2.php'; ?>
+						<form action="process2.php" method="post">
+						<input type="hidden" name="menu_id" value="<?php echo $menu_id; ?>">
+						<label class="col-form-label">Menu Name:</label>
+						<input type="text" class="form-control form-control-sm" name="menu_name" placeholder="" value="<?php echo $menu_name; ?>" required>
+						<label class="col-form-label">Description:</label>
+						<textarea class="form-control" rows="5" id="comment" name="description" placeholder="" required><?php echo $description; ?></textarea>
+						<label class="col-form-label">Price:</label>
+						<input type="text" class="form-control form-control-sm" name="price" placeholder="" value="<?php echo $price; ?>" required>
+						<label class="col-form-label">Unit:</label>
+						<input type="number" class="form-control form-control-sm" name="unit" placeholder="" value="<?php echo $unit; ?>" required><br/>
 				            <?php
 								if ($update == true):
 								echo "<script>$('#exampleModalCenter2').modal('show');</script>";
@@ -159,13 +156,13 @@
 							<?php else: ?>
 								<input class="btn btn-danger btn-block button2" type="submit" name="submit" value="Save" onclick="return confirm('Are you sure?');">
 							<?php endif; ?>
-						  </form>
+						</form>
 						</div>
-					 <div class="modal-footer">
-					 <button type="button" class="btn btn-primary btn-block button2" data-dismiss="modal">Close</button>
+						<div class="modal-footer">
+						<button type="button" class="btn btn-primary btn-block button2" data-dismiss="modal">Close</button>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-	</body>
-</html>
+		</body>
+	</html>

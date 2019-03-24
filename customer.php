@@ -32,22 +32,15 @@
 			<script src="bootstrap-4.0.0-beta.3-dist/js/bootstrap.bundle.min.js"></script>
 			
 	</head>
-<body>
+<body><br/>
+	<form action="customer.php" method="POST">
 	<div class="container">
-		<form action="customer.php" method="POST">
-			<nav class="navbar navbar-expand-lg navbar-light bg-light">
-			<a class="navbar-brand" href="customer.php">Customer</a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="navbar-nav mr-auto">
-			<li class="nav-item">
-			<a class="nav-link" href="home.php">back</a>
-		  </li>
-       </ul>
-   </div>
-</nav><br/><br/>
+		<nav aria-label="breadcrumb">
+		<ol class="breadcrumb">
+		<li class="breadcrumb-item"><a href="home.php">Back</a></li>
+		<li class="breadcrumb-item active" aria-current="page">Customer</li>
+	</ol>
+</nav><br/>
 	<div class="container">
 		<div class="col-sm-12">
 		<div class="table-responsive">
