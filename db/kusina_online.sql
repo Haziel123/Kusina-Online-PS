@@ -3,7 +3,11 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
+<<<<<<< HEAD
 -- Generation Time: Apr 26, 2019 at 12:35 AM
+=======
+-- Generation Time: Apr 26, 2019 at 07:21 PM
+>>>>>>> fifth commit
 -- Server version: 10.1.19-MariaDB
 -- PHP Version: 5.6.28
 
@@ -27,7 +31,11 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `customer` (
+<<<<<<< HEAD
   `customer_id` int(11) NOT NULL,
+=======
+  `customer_id` int(50) NOT NULL,
+>>>>>>> fifth commit
   `first_name` varchar(50) NOT NULL,
   `last_name` varchar(50) NOT NULL,
   `middle_initial` varchar(2) NOT NULL,
@@ -43,10 +51,17 @@ CREATE TABLE `customer` (
 --
 
 INSERT INTO `customer` (`customer_id`, `first_name`, `last_name`, `middle_initial`, `phone_number`, `province`, `street`, `barangay`, `city`) VALUES
+<<<<<<< HEAD
 (1, 'Haziel', 'Aboga-a', 'G.', '09057935758', 'Misamis Occidental', 'Purok 1', 'Tuburan', 'Aloran'),
 (2, 'kenna Lou', 'Eseos', 'A.', '09503389447', 'Misamis Occidental', 'Purok-3', 'Lumbayao', 'Aloran'),
 (3, 'Julie Jane', 'Dumon', '-', '09012347423', 'Misamis Occidental', 'Purok 1', 'Bunga', 'Oroquieta City'),
 (4, 'Mae Joy', 'Mocay', 'A.', '09123456789', 'Misamis Occidental', 'Purok 5', 'Palayan', 'Aloran');
+=======
+(1010, 'Haziel ', 'Abogaa', 'G.', '009057935758', 'Misamis Occidental', 'P-1', 'Tuburan', 'Aloran'),
+(1020, 'Erick', 'Salceda', 'o.', '09363399630', 'Misamis Occidental', 'P-6', 'Upper Loboc', 'Oroquieta City'),
+(1030, 'Kenna Lou', 'Eseos', 'A.', '09503389447', 'Misamis Occidental', 'P-2', 'Lumbayao', 'Aloran'),
+(1040, 'Mae Joy', 'Mocay', 'A.', '09124567891', 'Misamis Occidental', 'P-3', 'Palayan', 'Aloran');
+>>>>>>> fifth commit
 
 -- --------------------------------------------------------
 
@@ -55,8 +70,13 @@ INSERT INTO `customer` (`customer_id`, `first_name`, `last_name`, `middle_initia
 --
 
 CREATE TABLE `customer_order` (
+<<<<<<< HEAD
   `order_id` int(11) NOT NULL,
   `customer_id` int(11) NOT NULL,
+=======
+  `order_id` int(50) NOT NULL,
+  `customer_id` int(50) NOT NULL,
+>>>>>>> fifth commit
   `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -65,8 +85,15 @@ CREATE TABLE `customer_order` (
 --
 
 INSERT INTO `customer_order` (`order_id`, `customer_id`, `timestamp`) VALUES
+<<<<<<< HEAD
 (324, 2, '2019-04-03 07:03:00'),
 (1108, 3, '2019-04-10 15:56:00');
+=======
+(2211, 1020, '2018-02-21 23:24:00'),
+(2213, 1010, '1998-03-11 18:11:00'),
+(2215, 1040, '2019-04-02 08:01:00'),
+(2217, 1030, '2019-04-11 09:02:00');
+>>>>>>> fifth commit
 
 -- --------------------------------------------------------
 
@@ -94,22 +121,38 @@ INSERT INTO `login` (`id`, `username`, `password`) VALUES
 --
 
 CREATE TABLE `menu` (
+<<<<<<< HEAD
   `menu_id` int(11) NOT NULL,
   `menu_name` varchar(50) NOT NULL,
   `description` varchar(50) NOT NULL,
   `price` decimal(20,0) NOT NULL,
   `unit` varchar(20) NOT NULL
+=======
+  `menu_id` varchar(50) NOT NULL,
+  `menu_name` varchar(50) NOT NULL,
+  `price` decimal(10,2) NOT NULL,
+  `description` varchar(100) NOT NULL,
+  `unit` varchar(50) NOT NULL
+>>>>>>> fifth commit
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `menu`
 --
 
+<<<<<<< HEAD
 INSERT INTO `menu` (`menu_id`, `menu_name`, `description`, `price`, `unit`) VALUES
 (1001, 'Letchon baboy', 'lami siya', '250', '2'),
 (1002, 'Pancit', 'wereytru76i8', '100', '1'),
 (1003, 'Fried Chiken', 'desftryhtr', '190', '3'),
 (1004, '  Homba', 'fdhyyjuioiup', '100', '1');
+=======
+INSERT INTO `menu` (`menu_id`, `menu_name`, `price`, `description`, `unit`) VALUES
+('2010', 'Chicken Letchon', '150.00', 'Masarap kahit walang sauce', 'kls'),
+('2011', 'Pancit', '100.00', 'yumyum', 'grm'),
+('2012', 'Fried Chicken', '200.00', 'Crispylicious', 'kls'),
+('2013', 'Homba', '150.00', 'Lami siya lami', 'kls');
+>>>>>>> fifth commit
 
 -- --------------------------------------------------------
 
@@ -118,19 +161,35 @@ INSERT INTO `menu` (`menu_id`, `menu_name`, `description`, `price`, `unit`) VALU
 --
 
 CREATE TABLE `order_item` (
+<<<<<<< HEAD
   `order_id` int(11) NOT NULL,
   `menu_id` int(11) NOT NULL,
   `price` decimal(10,0) NOT NULL,
   `quantity` int(11) NOT NULL
+=======
+  `hidden_id` int(11) NOT NULL,
+  `order_id` int(50) NOT NULL,
+  `menu_id` varchar(50) NOT NULL,
+  `price` decimal(10,2) NOT NULL,
+  `quantity` varchar(50) NOT NULL
+>>>>>>> fifth commit
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `order_item`
 --
 
+<<<<<<< HEAD
 INSERT INTO `order_item` (`order_id`, `menu_id`, `price`, `quantity`) VALUES
 (324, 1001, '123', 0),
 (1108, 1001, '100', 2);
+=======
+INSERT INTO `order_item` (`hidden_id`, `order_id`, `menu_id`, `price`, `quantity`) VALUES
+(10, 2217, '2011', '130.00', '2'),
+(11, 2213, '2010', '190.00', '3'),
+(12, 2211, '2010', '100.00', '1'),
+(13, 2215, '2013', '50.00', '1');
+>>>>>>> fifth commit
 
 --
 -- Indexes for dumped tables
@@ -147,7 +206,11 @@ ALTER TABLE `customer`
 --
 ALTER TABLE `customer_order`
   ADD PRIMARY KEY (`order_id`),
+<<<<<<< HEAD
   ADD UNIQUE KEY `customer_id` (`customer_id`);
+=======
+  ADD KEY `customer_order_ibfk_1` (`customer_id`);
+>>>>>>> fifth commit
 
 --
 -- Indexes for table `login`
@@ -165,8 +228,14 @@ ALTER TABLE `menu`
 -- Indexes for table `order_item`
 --
 ALTER TABLE `order_item`
+<<<<<<< HEAD
   ADD UNIQUE KEY `order_id` (`order_id`,`menu_id`),
   ADD KEY `menu_id` (`menu_id`);
+=======
+  ADD PRIMARY KEY (`hidden_id`),
+  ADD KEY `order_item_ibfk_2` (`order_id`),
+  ADD KEY `order_item_ibfk_3` (`menu_id`);
+>>>>>>> fifth commit
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -178,6 +247,14 @@ ALTER TABLE `order_item`
 ALTER TABLE `login`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
+<<<<<<< HEAD
+=======
+-- AUTO_INCREMENT for table `order_item`
+--
+ALTER TABLE `order_item`
+  MODIFY `hidden_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+--
+>>>>>>> fifth commit
 -- Constraints for dumped tables
 --
 
@@ -191,8 +268,13 @@ ALTER TABLE `customer_order`
 -- Constraints for table `order_item`
 --
 ALTER TABLE `order_item`
+<<<<<<< HEAD
   ADD CONSTRAINT `order_item_ibfk_1` FOREIGN KEY (`order_id`) REFERENCES `customer_order` (`order_id`),
   ADD CONSTRAINT `order_item_ibfk_2` FOREIGN KEY (`menu_id`) REFERENCES `menu` (`menu_id`);
+=======
+  ADD CONSTRAINT `order_item_ibfk_2` FOREIGN KEY (`order_id`) REFERENCES `customer_order` (`order_id`),
+  ADD CONSTRAINT `order_item_ibfk_3` FOREIGN KEY (`menu_id`) REFERENCES `menu` (`menu_id`);
+>>>>>>> fifth commit
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
