@@ -36,6 +36,10 @@
 		<nav aria-label="breadcrumb">
 		<ol class="breadcrumb">
 		<li class="breadcrumb-item"><a href="home.php">Back</a></li>
+<<<<<<< HEAD
+=======
+		<li class="breadcrumb-item"><a href="addmenu.php">Add Menu</a></li>
+>>>>>>> fifth commit
 		<li class="breadcrumb-item active" aria-current="page">Menu list</li>
 	</ol>
   </nav>
@@ -49,6 +53,7 @@
 		<tr>
 			<th>Menu ID</th>
 			<th>Menu Name</th>
+<<<<<<< HEAD
 			<th>Description</th>
 			<th>Price</th>
 			<th>Unit</th>
@@ -61,6 +66,14 @@
 			
 			</div>
 			</div>
+=======
+			<th>Price</th>
+			<th>Description</th>
+			<th>Unit</th>
+			<th>Action</th>
+			<td>
+			
+>>>>>>> fifth commit
 			</td>
 		</tr>
 		</thead>
@@ -70,6 +83,7 @@
 			<tr>
 				<td><?php echo $row['menu_id'];?></td>
 				<td><?php echo $row['menu_name'];?></td>
+<<<<<<< HEAD
 				<td><?php echo $row['description'];?></td>
 				<td><?php echo $row['price'];?></td>
 				<td><?php echo $row['unit'];?></td>
@@ -162,5 +176,29 @@
 					</div>
 				</div>
 			</div>
+=======
+				<td><?php echo $row['price'];?></td>
+				<td><?php echo $row['description'];?></td>
+				<td><?php echo $row['unit'];?></td>
+			 <td>
+				<div class="btn-group" role="group">
+					<button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Option</button>
+						<div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+					<a class="dropdown-item" href="process2.php?delete=<?php echo $row["menu_id"]; ?>" onclick="return confirm('are you sure you want to delete?')">Delete</a>
+				<a class="dropdown-item" href="addmenu.php?edit=<?php echo $row["menu_id"]; ?>" onclick="return confirm('are you sure you want to edit?')">Edit</a>
+			</div>
+			</div>
+	  </td>
+	</tr>
+</tbody>
+
+	<?php endwhile;?>
+	</table>
+</center>
+     
+     
+    </div>  
+</section>
+>>>>>>> fifth commit
 		</body>
 	</html>

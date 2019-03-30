@@ -37,6 +37,10 @@
 		<nav aria-label="breadcrumb">
 		<ol class="breadcrumb">
 		<li class="breadcrumb-item"><a href="home.php">Back</a></li>
+<<<<<<< HEAD
+=======
+		<li class="breadcrumb-item"><a href="addcustomer.php">Add Customer</a></li>
+>>>>>>> fifth commit
 		<li class="breadcrumb-item active" aria-current="page">Customer list</li>
 	</ol>
 </nav>
@@ -69,6 +73,7 @@
 				<td><?php echo $row['street'];?></td>
 				<td><?php echo $row['barangay'];?></td>
 				<td><?php echo $row['city'];?></td>
+<<<<<<< HEAD
 			<td>
 			<div class="btn-group">
 			<button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Option
@@ -171,5 +176,26 @@
 				</div>
 			</div>
 		</div>
+=======
+			 <td>
+				<div class="btn-group" role="group">
+					<button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Option</button>
+						<div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+					<a class="dropdown-item" href="process.php?delete=<?php echo $row["customer_id"]; ?>" onclick="return confirm('are you sure you want to delete?')">Delete</a>
+				<a class="dropdown-item" href="addcustomer.php?edit=<?php echo $row["customer_id"]; ?>" onclick="return confirm('are you sure you want to edit?')">Edit</a>
+			</div>
+			</div>
+	  </td>
+	</tr>
+</tbody>
+
+	<?php endwhile;?>
+	</table>
+</center>
+     
+     
+    </div>  
+</section>
+>>>>>>> fifth commit
 	</body>
 </html>

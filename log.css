@@ -1,7 +1,11 @@
 body{
     margin: 0;
     padding: 0;
+<<<<<<< HEAD
     background-image: url(images/bgg.jpg);
+=======
+    background-image: url(images/background.jpg);
+>>>>>>> fifth commit
     background-size: cover;
 	background-repeat:no-repeat;
     font-family: arial;

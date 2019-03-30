@@ -57,8 +57,13 @@
 	</div>
 	</div>
     
+<<<<<<< HEAD
 	<div class="col-md-4">
 			<h1><u>All Total</u></h1>
+=======
+	<div class="col-md-4"><center>
+			<h1><b><u>All Total</u></b></h1>
+>>>>>>> fifth commit
 			<?php
 							$con = new mysqli("localhost", "root", "", "kusina online");
 							$sql = "SELECT SUM(price*quantity) as `total` FROM order_item ";
