@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 23, 2019 at 05:38 PM
+-- Generation Time: Apr 05, 2019 at 12:59 AM
 -- Server version: 10.1.19-MariaDB
 -- PHP Version: 5.6.28
 
@@ -43,8 +43,10 @@ CREATE TABLE `customer` (
 --
 
 INSERT INTO `customer` (`customer_id`, `first_name`, `last_name`, `middle_initial`, `phone_number`, `province`, `street`, `barangay`, `city`) VALUES
-(1, '', 'Aboga-a', 'G.', '09057935758', 'Misamis Occidental', 'Purok 1', 'Tuburan', 'Aloran'),
-(2, '', 'Eseos', 'A.', '09503389447', 'Misamis Occidental', 'Purok-3', 'Lumbayao', 'Aloran');
+(1, 'Haziel', 'Aboga-a', 'G.', '09057935758', 'Misamis Occidental', 'Purok 1', 'Tuburan', 'Aloran'),
+(2, 'kenna Lou', 'Eseos', 'A.', '09503389447', 'Misamis Occidental', 'Purok-3', 'Lumbayao', 'Aloran'),
+(3, 'Julie Jane', 'Dumon', '-', '09012347423', 'Misamis Occidental', 'Purok 1', 'Bunga', 'Oroquieta City'),
+(4, 'Mae Joy', 'Mocay', 'A.', '09123456789', 'Misamis Occidental', 'Purok 5', 'Palayan', 'Aloran');
 
 -- --------------------------------------------------------
 
@@ -96,7 +98,10 @@ CREATE TABLE `menu` (
 --
 
 INSERT INTO `menu` (`menu_id`, `menu_name`, `description`, `price`, `unit`) VALUES
-(1001, 'Letchon Belly', 'Lami siya lami', '150', '1');
+(1001, 'Letchon baboy', 'lami siya', '250', '2'),
+(1002, 'Pancit', 'wereytru76i8', '100', '1'),
+(1003, 'Fried Chiken', 'desftryhtr', '190', '3'),
+(1004, '  Homba', 'fdhyyjuioiup', '100', '1');
 
 -- --------------------------------------------------------
 

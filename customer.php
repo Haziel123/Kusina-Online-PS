@@ -2,8 +2,7 @@
 	if(isset($_POST['btn_search']))
 	{
     $search = $_POST['search'];
-		// search in all table columns
-		// using concat mysql function
+		
 		$query = "SELECT * FROM `customer` WHERE CONCAT(`customer_id`, `first_name`, 'last_name', 'middle_initial', 'phone_number', 'province', 'street',  'barangay', 'city') LIKE '%".$search."%'";
 		$search_result = filterTable($query);
     
@@ -13,7 +12,7 @@
 		$search_result = filterTable($query);
 	}
 
-	// function to connect and execute the query
+	
 	function filterTable($query)
 	{
 		$connect = mysqli_connect("localhost", "root", "", "kusina online");
@@ -38,7 +37,7 @@
 		<nav aria-label="breadcrumb">
 		<ol class="breadcrumb">
 		<li class="breadcrumb-item"><a href="home.php">Back</a></li>
-		<li class="breadcrumb-item active" aria-current="page">Customer</li>
+		<li class="breadcrumb-item active" aria-current="page">Customer list</li>
 	</ol>
 </nav><br/>
 	<div class="container">

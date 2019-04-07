@@ -1,7 +1,7 @@
 body{
     margin: 0;
     padding: 0;
-    background-image: url(images/6.jpg);
+    background-image: url(images/bgg.jpg);
     background-size: cover;
 	background-repeat:no-repeat;
     font-family: arial;
@@ -43,8 +43,8 @@ h1{
 }
 
 .loginbox input{
-    width: 100%;
-    margin-bottom: 20px;
+    width: 80%;
+    margin-bottom: 30px;
 }
 
 .loginbox input[type="text"], input[type="password"]
@@ -53,9 +53,9 @@ h1{
     border-bottom: 1px solid #fff;
     background: transparent;
     outline: none;
-    height: 40px;
+    height: 30px;
     color: #fff;
-    font-size: 16px;
+    font-size: 15px;
 }
 .loginbox input[type="submit"]
 {
@@ -67,7 +67,7 @@ h1{
     font-size: 18px;
     border-radius: 20px;
 	width:200px;
-	float:center;
+	float:left;
 	
 }
 .loginbox input[type="submit"]:hover

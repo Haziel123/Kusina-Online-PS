@@ -27,7 +27,10 @@
 			<a class="nav-link" href="menu.php">&nbsp;&nbsp;&nbsp;&nbsp;Menu</a>
 		</li>
 		<li class="nav-item">
-			<a class="nav-link" href="customerorder.html">&nbsp;&nbsp;&nbsp;&nbsp;Order</a>
+			<a class="nav-link" href="order.php">&nbsp;&nbsp;&nbsp;&nbsp;Order</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" href="orderitem.php">&nbsp;&nbsp;&nbsp;&nbsp;Order item</a>
 		</li>
 		<li class="nav-item">
 			<a class="nav-link" href="reports.php">&nbsp;&nbsp;&nbsp;&nbsp;Reports</a>
@@ -41,7 +44,8 @@
     </ul>
   </div>
 </nav>
-<br/><br/><br/>
+<br/><br/><br/><br/>
 		<center><img src="images/kusina3.jpg" class="img-fluid" alt="Responsive image">
-	</body>
+		
+</body>
 </html>
