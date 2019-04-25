@@ -39,7 +39,7 @@
 		<li class="breadcrumb-item active" aria-current="page">Menu list</li>
 	</ol>
   </nav>
-<br/>
+
 
 	<div class="container">
 		<div class="col-sm-12">
@@ -52,10 +52,9 @@
 			<th>Description</th>
 			<th>Price</th>
 			<th>Unit</th>
-			<th>Action</th>
 			<td>
 			<div class="btn-group">
-			<button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Add
+			<button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Action
 			</button>
 			<div class="dropdown-menu">
 			<a  data-toggle="modal" data-target="#exampleModalCenter1" class="dropdown-item">Add</a>

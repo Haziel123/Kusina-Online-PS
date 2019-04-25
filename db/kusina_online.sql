@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 05, 2019 at 12:59 AM
+-- Generation Time: Apr 26, 2019 at 12:35 AM
 -- Server version: 10.1.19-MariaDB
 -- PHP Version: 5.6.28
 
@@ -60,6 +60,14 @@ CREATE TABLE `customer_order` (
   `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `customer_order`
+--
+
+INSERT INTO `customer_order` (`order_id`, `customer_id`, `timestamp`) VALUES
+(324, 2, '2019-04-03 07:03:00'),
+(1108, 3, '2019-04-10 15:56:00');
+
 -- --------------------------------------------------------
 
 --
@@ -115,6 +123,14 @@ CREATE TABLE `order_item` (
   `price` decimal(10,0) NOT NULL,
   `quantity` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `order_item`
+--
+
+INSERT INTO `order_item` (`order_id`, `menu_id`, `price`, `quantity`) VALUES
+(324, 1001, '123', 0),
+(1108, 1001, '100', 2);
 
 --
 -- Indexes for dumped tables

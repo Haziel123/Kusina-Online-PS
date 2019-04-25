@@ -39,7 +39,7 @@
 		<li class="breadcrumb-item"><a href="home.php">Back</a></li>
 		<li class="breadcrumb-item active" aria-current="page">Customer list</li>
 	</ol>
-</nav><br/>
+</nav>
 	<div class="container">
 		<div class="col-sm-12">
 		<div class="table-responsive">
